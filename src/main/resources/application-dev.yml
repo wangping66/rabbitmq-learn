@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true #这两个属性与rabbitmq的版本有关，有的版本没有
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
